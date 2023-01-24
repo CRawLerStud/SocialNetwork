@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkgui.MainPageController">
+   <AnchorPane prefHeight="52.0" prefWidth="800.0" style="-fx-background-color: #3066BE;">
+      <Button fx:id="logoButton" layoutX="332.0" layoutY="3.0" mnemonicParsing="false" onAction="#loadHomeScene" style="-fx-background-color: transparent;" text="Friendnest" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="25.0" />
+         </font>
+      </Button>
+   </AnchorPane>
+   <AnchorPane layoutY="52.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: white;">
+      <ButtonBar buttonMinWidth="80.0" layoutX="124.0" layoutY="1.0" prefHeight="50.0">
+         <buttons>
+            <Button fx:id="myProfileButton" alignment="CENTER" mnemonicParsing="false" onAction="#showMyProfile" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@my_profile.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="homeButton" alignment="CENTER" mnemonicParsing="false" onAction="#loadHomeScene" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@home_1.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="chatButton" alignment="CENTER" mnemonicParsing="false" onAction="#loadChatAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@messages.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="notificationButton" alignment="CENTER" mnemonicParsing="false" onAction="#showNotifications" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@notifications.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="settingsButton" alignment="CENTER" mnemonicParsing="false" onAction="#loadSettingsScene" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@settings.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="signOutButton" alignment="CENTER" mnemonicParsing="false" onAction="#signOutAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@sign out.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+         </buttons>
+      </ButtonBar>
+   </AnchorPane>
+   <AnchorPane layoutX="150.0" layoutY="128.0" prefHeight="362.0" prefWidth="500.0">
+      <TextField fx:id="searchTextField" layoutX="48.0" layoutY="1.0" prefHeight="26.0" prefWidth="400.0" promptText="Search" style="-fx-background-radius: 15;">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Button layoutX="392.0" layoutY="2.0" mnemonicParsing="false" onAction="#searchUsers" prefHeight="20.0" prefWidth="55.0" style="-fx-background-radius: 15; -fx-background-color: #3066BE;">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@search.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <ListView fx:id="searchUsersListView" layoutX="-4.0" layoutY="41.0" prefHeight="240.0" prefWidth="504.0" style="-fx-background-radius: 15;" />
+      <Button fx:id="addFriendButton" layoutX="272.0" layoutY="334.0" mnemonicParsing="false" onAction="#sendFriendRequestAction" prefHeight="26.0" prefWidth="218.0" style="-fx-background-color: #3066BE; -fx-background-radius: 15; -fx-text-fill: white;" text="Add Friend">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@user-add.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="messageLabel" layoutX="118.0" layoutY="299.0" prefHeight="18.0" prefWidth="264.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" />
+      <Button fx:id="cancelFriendButton" layoutX="9.0" layoutY="334.0" mnemonicParsing="false" onAction="#cancelFriendAction" prefHeight="26.0" prefWidth="218.0" style="-fx-background-color: #3066BE; -fx-background-radius: 15; -fx-text-fill: white;" text="Cancel Friendship Request">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@delete-user.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </AnchorPane>
+</AnchorPane>

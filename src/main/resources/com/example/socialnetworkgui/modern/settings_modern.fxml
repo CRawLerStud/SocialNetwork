@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkgui.SettingsController">
+   <children>
+      <AnchorPane prefHeight="52.0" prefWidth="800.0" style="-fx-background-color: #3066BE;">
+         <children>
+            <Button fx:id="logoButton" layoutX="332.0" layoutY="3.0" mnemonicParsing="false" onAction="#loadHomeScene" style="-fx-background-color: transparent;" text="Friendnest" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="52.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <children>
+            <ButtonBar buttonMinWidth="80.0" layoutX="124.0" layoutY="1.0" prefHeight="50.0">
+               <buttons>
+                <Button fx:id="myProfileButton" alignment="CENTER" mnemonicParsing="false" onAction="#showMyProfile" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@my_profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="homeButton" alignment="CENTER" mnemonicParsing="false" onAction="#loadHomeScene" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="chatButton" alignment="CENTER" mnemonicParsing="false" onAction="#loadChatAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@messages.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="notificationButton" alignment="CENTER" mnemonicParsing="false" onAction="#showNotifications" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@notifications.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="settingsButton" alignment="CENTER" mnemonicParsing="false" onAction="#loadSettingsScene" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@settings_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="signOutButton" alignment="CENTER" mnemonicParsing="false" onAction="#signOutAction" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-background-radius: 10;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sign out.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </buttons>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="100.0" layoutY="123.0" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <AnchorPane layoutY="8.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" text="Personal Details" textFill="#3066be">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="474.5999755859375" endY="-1.52587890625E-5" layoutX="112.0" layoutY="22.0" startX="-100.0" stroke="#3167bd" />
+               </children>
+            </AnchorPane>
+            <GridPane hgap="20.0" layoutX="12.0" layoutY="52.0" prefHeight="100.0" prefWidth="576.0" vgap="10.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.20001220703125" minWidth="10.0" prefWidth="145.2" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.5999755859375" minWidth="10.0" prefWidth="283.00004882812493" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="2.4000244140625" prefWidth="110.199951171875" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Surname">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="surnameTextField" style="-fx-background-radius: 15;" GridPane.columnIndex="1" />
+                  <Button fx:id="changeSurnameButton" mnemonicParsing="false" onAction="#changeSurnameAction" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: #3066BE;" text="Modify Surname" textFill="WHITE" GridPane.columnIndex="2" />
+                  <Label text="Lastname" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastnameTextField" style="-fx-background-radius: 15;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="changeLastnameButton" mnemonicParsing="false" onAction="#changeLastnameAction" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: #3066BE;" text="Modify Lastname" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Birthdate" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="birthdatePicker" prefHeight="26.0" prefWidth="286.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="changeBirthdateButton" mnemonicParsing="false" onAction="#changeBirthdateAction" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: #3066BE;" text="Modify Birthdate" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <AnchorPane layoutY="166.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" text="Account Settings" textFill="#3066be">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="474.5999755859375" endY="-1.52587890625E-5" layoutX="112.0" layoutY="22.0" startX="-100.0" stroke="#3167bd" />
+               </children>
+            </AnchorPane>
+            <GridPane hgap="20.0" layoutX="12.0" layoutY="210.0" prefHeight="66.0" prefWidth="576.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.20001220703125" minWidth="10.0" prefWidth="145.2" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.5999755859375" minWidth="10.0" prefWidth="283.00004882812493" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="2.4000244140625" prefWidth="110.199951171875" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <PasswordField fx:id="passwordTextField" style="-fx-background-radius: 15;" GridPane.columnIndex="1" />
+                  <Label text="Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Confirm Password" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="changePasswordButton" mnemonicParsing="false" onAction="#changePasswordAction" prefWidth="120.0" style="-fx-background-radius: 15; -fx-background-color: #3066BE;" text="Modify Password" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <PasswordField fx:id="confirmPasswordTextField" style="-fx-background-radius: 15;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label fx:id="messageLabel" layoutX="83.0" layoutY="366.0" prefHeight="18.0" prefWidth="434.0" style="-fx-alignment: center;" text="Message HERE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

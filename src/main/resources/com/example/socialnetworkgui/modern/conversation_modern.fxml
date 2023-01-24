@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.socialnetworkgui.ConversationController">
+   <ListView fx:id="messageListView" layoutY="60.0" prefHeight="481.0" prefWidth="800.0" />
+   <AnchorPane prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: #3066BE;">
+      <Button fx:id="conversationNameButton" layoutX="176.0" layoutY="7.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="448.0" style="-fx-background-color: transparent;" text="Conversation Name Here" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Demi Cond" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#backAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@arrow-left.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </AnchorPane>
+   <AnchorPane layoutY="529.0" prefHeight="70.0" prefWidth="800.0" style="-fx-background-color: #3066BE;">
+      <TextField fx:id="messageTextField" layoutX="14.0" layoutY="16.0" prefHeight="37.0" prefWidth="718.0" promptText="Write a message..." style="-fx-background-radius: 15;" />
+      <Button fx:id="sendMessageButton" layoutX="744.0" layoutY="18.0" mnemonicParsing="false" onAction="#sendMessageAction" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@requests.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+   </AnchorPane>
+</AnchorPane>
