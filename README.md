@@ -1,6 +1,6 @@
-# SocialNetwork
+# Friendnest
 
-This is a Social Network App Called FriendNest developed during the third semester at the Faculty Of Computer Science.<br>
+This is a social network app called FriendNest developed during the third semester at the Faculty Of Computer Science.<br>
 The app is developed in Java(back-end), Postgres SQL(back-end) and JavaFX(front-end).<br>
 
 Friendnest's functionalities:
